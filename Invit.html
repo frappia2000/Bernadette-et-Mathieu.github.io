@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation Mariage - Bernadette & Mathieu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js"></script>
+</head>
+<body>
+    <!-- Bouton Musique Miniature -->
+    <button class="music-btn" onclick="toggleMusic()">🎵</button>
+
+    <!-- Lecteur Audio masqué (géré par le script) -->
+    <audio id="wedding-audio" src="DadjuHeritage.mp3" loop></audio>
+
+    <!-- SECTION 1 : Accueil & Compte à rebours -->
+       <!-- SECTION 1 : Accueil & Compte à rebours -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <!-- Nouvelle structure d'introduction -->
+            <p class="hero-invite-text">Vous êtes cordialement invité(e) au mariage religieux de</p></br>
+            
+            <h1 class="names">
+                <span class="first-name">Bernadette</span>
+                <span class="ampersand">&</span>
+                <span class="second-name">Mathieu</span>
+            </h1>
+            
+            <p class="date-text">Samedi 29 Août 2026</p>
+            
+            <!-- Compte à rebours -->
+            <div class="countdown">
+                <div class="time-box"><span id="days">00</span><p>Jours</p></div>
+                <div class="time-box"><span id="hours">00</span><p>Heures</p></div>
+                <div class="time-box"><span id="minutes">00</span><p>Min</p></div>
+                <div class="time-box"><span id="seconds">00</span><p>Sec</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2 : Présentation & Texte (Mise en page alignée sur l'image) -->
+    <section class="text-section">
+        <p class="intro-title">Avec la joie de</p>
+        <p class="sub-family">Nos familles</p>
+        <p class="family-names">Les familles Kamon Songon Ghwon et Alliés,</p>
+        <p class="family-names">Ainsi que les familles ABOU, Kodji Ghwon et Alliés,</p>
+        <p class="invitation-text">Ont l’honneur et la joie de vous convier</p>
+        <p class="celebration-text">À la célébration de l’union de</p>
+        <h2 class="couple-names">Bernadette & Mathieu</h2>
+    </section>
+
+    <!-- SECTION 3 : Les Lieux (Avec vrais liens Embed qui marchent en local) -->
+    <section class="maps-section">
+        <h2>Les Lieux de la Célébration</h2>
+        
+        <div class="map-container">
+            <h3>⛪ L'Église - 
+10h00
+</h3>
+            <p>Rendez-vous pour la cérémonie religieuse <b>Paroisse Cœur Immaculé de Marie du Plateau Dokoui</b>.</p>
+            <iframe src="https://google.com" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="map-container">
+            <h3>✨ La Réception - 13h00</h3>
+            <p>Suivez-nous pour faire la fête et dîner ensemble à <b>Élysium Event.</b></p>
+            <iframe src="https://google.com" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- SECTION 4 : Formulaire de Présence (RSVP) -->
+    
+       <section class="rsvp-section">
+        <p class="rsvp-top-text">Votre présence compte pour nous</p>
+        <h2 class="rsvp-title">Confirmez votre venue</h2>
+        <p class="rsvp-details">Merci de nous faire savoir si vous serez parmi nous pour partager ce moment de bonheur. Votre réponse nous aidera à préparer ce jour comme il se doit.</p>
+        <p class="rsvp-action-text">RSVP – Je confirme ma présence</p>
+
+        <form class="rsvp-form" action="mailto:min3dpro@gmail.com" method="POST" enctype="text/plain">
+            <input type="text" name="Nom" placeholder="Votre Nom et Prénom" required>
+            <input type="number" name="Accompagnateurs" placeholder="Nombre d'accompagnateurs" min="0" required>
+            <select name="Presence" required>
+                <option value="" disabled selected>Serez-vous présent ?</option>
+                <option value="oui">Oui, avec joie !</option>
+                <option value="non">Malheureusement non</option>
+            </select>
+            <button type="submit" class="submit-btn">Envoyer</button>
+        </form>
+    </section>
+   
+</body>
+</html>
