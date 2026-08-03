@@ -1739,6 +1739,13 @@ form label {
 .btn-outline:hover, .btn-outline:focus, .btn-outline:active {
   box-shadow: none;
 }
+@media screen and (max-width: 768px) {
+    #fh5co-header.fh5co-cover {
+        background-position: center 20% !important;
+        background-size: cover !important;
+        background-attachment: scroll !important;
+    }
+}
 
 .btn.with-arrow {
   position: relative;
