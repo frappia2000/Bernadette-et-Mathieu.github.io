@@ -9,8 +9,11 @@
 </head>
 <body>
     <!-- Bouton Musique Miniature -->
-    <button class="music-btn" onclick="toggleMusic()">🎵</button>
-
+      <!-- Bouton Musique Miniature avec sa bulle d'invitation -->
+    <div class="music-container">
+        <button class="music-btn" onclick="toggleMusic()">🎵</button>
+        <div id="music-tooltip" class="music-pop">Activez la musique ! 🎵</div>
+    </div>
     <!-- Lecteur Audio masqué (géré par le script) -->
     <audio id="wedding-audio" src="DadjuHeritage.mp3" loop></audio>
 
@@ -25,7 +28,7 @@
                 <span class="second-name">Mathieu</span>
             </h1>
             
-            <p class="date-text">Samedi 05 septembre 2026</p>
+            <p class="date-text">Samedi 29 Août 2026</p>
             
             <!-- Compte à rebours -->
             <div class="countdown">
@@ -55,16 +58,19 @@
         <div class="map-container">
             <h3>⛪ L'Église - 10h00</h3>
             <p>Rendez-vous pour la cérémonie religieuse <b>Paroisse Cœur Immaculé de Marie du Plateau Dokoui</b>.</p>
-            <iframe src="https://google.com" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- Code généré directement à partir de vos coordonnées géographiques exactes -->
+<a href="https://www.google.com/maps/place/Paroisse+C%C5%93ur+Immacul%C3%A9+de+Marie/@5.395008,-4.0071139,16z/data=!4m14!1m7!3m6!1s0xfc193002a493db9:0x421322d6bd48caf1!2zTOKAmcOJbHlzaXVtIEV2ZW50!8m2!3d5.4029939!4d-3.9590753!16s%2Fg%2F11xg04_hfb!3m5!1s0xfc194bf5b9d2187:0x9e25a6eb62bd799!8m2!3d5.3974466!4d-4.0077865!
+                16s%2Fg%2F11g72c7gy0!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Voir l'itinéraire sur Google Maps</a>
         </div>
 
         <div class="map-container">
             <h3>✨ La Réception - 13h00</h3>
             <p>Suivez-nous pour faire la fête et dîner ensemble à <b>Élysium Event.</b></p>
-            <iframe src="https://google.com" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- Code d'intégration généré pour l'Élysium Event contenu dans votre lien -->
+           <a href="https://www.google.com/maps/place/L%E2%80%99%C3%89lysium+Event/@5.4030259,-3.9592791,17z/data=!4m6!3m5!1s0xfc193002a493db9:0x421322d6bd48caf1!8m2!3d5.4029939!
+           4d-3.9590753!16s%2Fg%2F11xg04_hfb!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Voir l'itinéraire sur Google Maps</a>
         </div>
     </section>
-
     <!-- SECTION 4 : Formulaire de Présence (RSVP) -->
     <section class="rsvp-section">
         <p class="rsvp-top-text">Votre présence compte pour nous</p>
