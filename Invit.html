@@ -15,11 +15,9 @@
     <audio id="wedding-audio" src="DadjuHeritage.mp3" loop></audio>
 
     <!-- SECTION 1 : Accueil & Compte à rebours -->
-       <!-- SECTION 1 : Accueil & Compte à rebours -->
     <section class="hero-section">
         <div class="hero-content">
-            <!-- Nouvelle structure d'introduction -->
-            <p class="hero-invite-text">Vous êtes cordialement invité(e) au mariage religieux de</p></br>
+            <p class="hero-invite-text">Vous êtes cordialement invité(e) au mariage religieux de</p>
             
             <h1 class="names">
                 <span class="first-name">Bernadette</span>
@@ -27,7 +25,7 @@
                 <span class="second-name">Mathieu</span>
             </h1>
             
-            <p class="date-text">Samedi 29 Août 2026</p>
+            <p class="date-text">Samedi 05 septembre 2026</p>
             
             <!-- Compte à rebours -->
             <div class="countdown">
@@ -39,7 +37,7 @@
         </div>
     </section>
 
-    <!-- SECTION 2 : Présentation & Texte (Mise en page alignée sur l'image) -->
+    <!-- SECTION 2 : Présentation & Texte -->
     <section class="text-section">
         <p class="intro-title">Avec la joie de</p>
         <p class="sub-family">Nos familles</p>
@@ -50,14 +48,12 @@
         <h2 class="couple-names">Bernadette & Mathieu</h2>
     </section>
 
-    <!-- SECTION 3 : Les Lieux (Avec vrais liens Embed qui marchent en local) -->
+    <!-- SECTION 3 : Les Lieux -->
     <section class="maps-section">
         <h2>Les Lieux de la Célébration</h2>
         
         <div class="map-container">
-            <h3>⛪ L'Église - 
-10h00
-</h3>
+            <h3>⛪ L'Église - 10h00</h3>
             <p>Rendez-vous pour la cérémonie religieuse <b>Paroisse Cœur Immaculé de Marie du Plateau Dokoui</b>.</p>
             <iframe src="https://google.com" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
@@ -70,24 +66,25 @@
     </section>
 
     <!-- SECTION 4 : Formulaire de Présence (RSVP) -->
-    
-       <section class="rsvp-section">
+    <section class="rsvp-section">
         <p class="rsvp-top-text">Votre présence compte pour nous</p>
         <h2 class="rsvp-title">Confirmez votre venue</h2>
         <p class="rsvp-details">Merci de nous faire savoir si vous serez parmi nous pour partager ce moment de bonheur. Votre réponse nous aidera à préparer ce jour comme il se doit.</p>
         <p class="rsvp-action-text">RSVP – Je confirme ma présence</p>
 
-        <form class="rsvp-form" action="mailto:min3dpro@gmail.com" method="POST" enctype="text/plain">
-            <input type="text" name="Nom" placeholder="Votre Nom et Prénom" required>
-            <input type="number" name="Accompagnateurs" placeholder="Nombre d'accompagnateurs" min="0" required>
-            <select name="Presence" required>
+        <!-- Formulaire connecté à Formspree pour un envoi direct -->
+        <form class="rsvp-form" action="https://formspree.io/f/meeyywvb" method="POST">
+            <input type="text" name="Nom et Prénom" placeholder="Votre Nom et Prénom" required>
+            <input type="number" name="Nombre d'accompagnateurs" placeholder="Nombre d'accompagnateurs" min="0" required>
+            <select name="Présence" required>
                 <option value="" disabled selected>Serez-vous présent ?</option>
-                <option value="oui">Oui, avec joie !</option>
-                <option value="non">Malheureusement non</option>
+                <option value="Oui, avec joie !">Oui, avec joie !</option>
+                <option value="Malheureusement non">Malheureusement non</option>
             </select>
+            <!-- Champ caché pour rediriger l'invité sur une page de remerciement (Optionnel) -->
+            <input type="hidden" name="_next" value="https://github.io">
             <button type="submit" class="submit-btn">Envoyer</button>
         </form>
     </section>
-   
 </body>
 </html>
