@@ -18,6 +18,11 @@ body {
   line-height: 1.7;
   color: #828282;
   background: #fff;
+    background-image: url('images/votre-image.jpg'); /* Laissez votre lien actuel ici */
+    background-size: cover;                         /* FORCE l'image à s'adapter à la taille de l'écran */
+    background-position: center center;             /* Centre la photo pour éviter qu'elle soit décalée */
+    background-repeat: no-repeat;                   /* Empêche l'image de se doubler */
+    background-attachment: scroll;                  /* Empêche les bugs d'affichage sur les navigateurs mobiles */
 }
 
 #page {
