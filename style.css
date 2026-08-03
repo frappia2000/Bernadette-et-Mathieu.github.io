@@ -276,3 +276,56 @@ iframe {
     margin-top: 10px;
     margin-bottom: 15px;
 }
+/* --- CONTENEUR ET POP-UP MUSIQUE --- */
+.music-container {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* On réajuste la position fixe du bouton pour qu'il suive le conteneur */
+.music-btn {
+    position: static !important; 
+}
+
+/* Style de la bulle Pop-up */
+.music-pop {
+    background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728);
+    color: #0d1b2a;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+    position: relative;
+    animation: pulsePop 2s infinite ease-in-out;
+}
+
+/* Petite flèche pointant vers le bouton de musique */
+.music-pop::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -6px;
+    transform: translateY(-50%);
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent #b38728;
+}
+
+/* Animation d'attraction visuelle */
+@keyframes pulsePop {
+    0% { transform: scale(1); opacity: 0.9; }
+    50% { transform: scale(1.05); opacity: 1; box-shadow: 0 4px 20px rgba(252, 246, 186, 0.4); }
+    100% { transform: scale(1); opacity: 0.9; }
+}
+
+/* Masquer proprement sur les très petits écrans si besoin */
+@media (max-width: 400px) {
+    .music-pop { font-size: 0.75rem; padding: 4px 8px; }
+}
